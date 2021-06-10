@@ -1,0 +1,105 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ProjectNewWorldScriptLoader = Instance.new("ScreenGui")
+local MainScreen = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local ProjectNewWorld1ScriptButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local CloseScriptButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local ProjectNewWorld2ScriptButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+ProjectNewWorldScriptLoader.Name = "ProjectNewWorldScriptLoader"
+ProjectNewWorldScriptLoader.Parent = game.CoreGui
+ProjectNewWorldScriptLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainScreen.Name = "MainScreen"
+MainScreen.Parent = ProjectNewWorldScriptLoader
+MainScreen.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+MainScreen.Position = UDim2.new(0.0702576116, 0, 0.0303605311, 0)
+MainScreen.Size = UDim2.new(0, 322, 0, 125)
+MainScreen.Active = true
+MainScreen.Visible = true
+
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = MainScreen
+
+TextLabel.Parent = MainScreen
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+TextLabel.Size = UDim2.new(0, 322, 0, 29)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Vynx Script Loader"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = TextLabel
+
+ProjectNewWorld1ScriptButton.Name = "ProjectNewWorld(1)ScriptButton"
+ProjectNewWorld1ScriptButton.Parent = MainScreen
+ProjectNewWorld1ScriptButton.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
+ProjectNewWorld1ScriptButton.Position = UDim2.new(0.0124223605, 0, 0.312000006, 0)
+ProjectNewWorld1ScriptButton.Size = UDim2.new(0, 313, 0, 26)
+ProjectNewWorld1ScriptButton.Font = Enum.Font.SourceSansBold
+ProjectNewWorld1ScriptButton.Text = "SkyHub (BEST)"
+ProjectNewWorld1ScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ProjectNewWorld1ScriptButton.TextSize = 20.000
+ProjectNewWorld1ScriptButton.MouseButton1Down:connect(function()
+	--- Setting Theme
+	getgenv().SettingTheme = {
+		Tab = {
+			Left_Color = Color3.fromRGB(203 ,156, 255),
+			Right_Color = Color3.fromRGB(140, 166 ,252)
+		},
+		Button = {
+			Left_Color = Color3.fromRGB(203 ,156, 255),
+			Right_Color = Color3.fromRGB(140, 166 ,252)
+		},
+	}
+	--- Script Body
+	loadstring(game:HttpGet("http://skyhubking.xyz/script/free_script/SKYHUB__A/ScriptHub.lua"))()
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = ProjectNewWorld1ScriptButton
+
+CloseScriptButton.Name = "CloseScriptButton"
+CloseScriptButton.Parent = MainScreen
+CloseScriptButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseScriptButton.Size = UDim2.new(0, 78, 0, 29)
+CloseScriptButton.Font = Enum.Font.SourceSansBold
+CloseScriptButton.Text = " Close"
+CloseScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseScriptButton.TextSize = 20.000
+CloseScriptButton.MouseButton1Down:connect(function()
+	MainScreen.Visible = false
+	MainScreen.Active = false
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 15)
+UICorner_4.Parent = CloseScriptButton
+
+ProjectNewWorld2ScriptButton.Name = "ProjectNewWorld(2)ScriptButton"
+ProjectNewWorld2ScriptButton.Parent = MainScreen
+ProjectNewWorld2ScriptButton.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
+ProjectNewWorld2ScriptButton.Position = UDim2.new(0.0124223605, 0, 0.567999959, 0)
+ProjectNewWorld2ScriptButton.Size = UDim2.new(0, 313, 0, 26)
+ProjectNewWorld2ScriptButton.Font = Enum.Font.SourceSansBold
+ProjectNewWorld2ScriptButton.Text = "Kronos Hub (Very Good)"
+ProjectNewWorld2ScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ProjectNewWorld2ScriptButton.TextSize = 20.000
+ProjectNewWorld2ScriptButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/LeadMarker/main/KronosHub"))()
+end)
+
+UICorner_5.CornerRadius = UDim.new(0, 15)
+UICorner_5.Parent = ProjectNewWorld2ScriptButton
