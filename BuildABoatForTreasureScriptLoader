@@ -1,0 +1,74 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BuildABoatForTreasureScriptLoader = Instance.new("ScreenGui")
+local MainScreen = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local BuildABoatForTreasure1ScriptButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local CloseScriptButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+BuildABoatForTreasureScriptLoader.Name = "BuildABoatForTreasureScriptLoader"
+BuildABoatForTreasureScriptLoader.Parent = game.CoreGui
+BuildABoatForTreasureScriptLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainScreen.Name = "MainScreen"
+MainScreen.Parent = BuildABoatForTreasureScriptLoader
+MainScreen.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+MainScreen.Position = UDim2.new(0.0702576116, 0, 0.0303605311, 0)
+MainScreen.Size = UDim2.new(0, 322, 0, 125)
+MainScreen.Visible = true
+MainScreen.Active = true
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = MainScreen
+
+TextLabel.Parent = MainScreen
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+TextLabel.Size = UDim2.new(0, 322, 0, 29)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Vynx Script Loader"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = TextLabel
+
+BuildABoatForTreasure1ScriptButton.Name = "BuildABoatForTreasure(1)ScriptButton"
+BuildABoatForTreasure1ScriptButton.Parent = MainScreen
+BuildABoatForTreasure1ScriptButton.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
+BuildABoatForTreasure1ScriptButton.Position = UDim2.new(0.0124223605, 0, 0.312000006, 0)
+BuildABoatForTreasure1ScriptButton.Size = UDim2.new(0, 313, 0, 26)
+BuildABoatForTreasure1ScriptButton.Font = Enum.Font.SourceSansBold
+BuildABoatForTreasure1ScriptButton.Text = "Build a Boat For Treasure Autufarm"
+BuildABoatForTreasure1ScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+BuildABoatForTreasure1ScriptButton.TextSize = 20.000
+BuildABoatForTreasure1ScriptButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/LeadMarker/main/KronosHub"))()
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = BuildABoatForTreasure1ScriptButton
+
+CloseScriptButton.Name = "CloseScriptButton"
+CloseScriptButton.Parent = MainScreen
+CloseScriptButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseScriptButton.Size = UDim2.new(0, 78, 0, 29)
+CloseScriptButton.Font = Enum.Font.SourceSansBold
+CloseScriptButton.Text = " Close"
+CloseScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseScriptButton.TextSize = 20.000
+CloseScriptButton.MouseButton1Down:connect(function()
+	MainScreen.Visible = false
+	MainScreen.Active = false
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 15)
+UICorner_4.Parent = CloseScriptButton
