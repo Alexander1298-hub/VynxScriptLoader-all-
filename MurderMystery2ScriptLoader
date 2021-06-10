@@ -1,0 +1,93 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MurderMystery2ScriptLoader = Instance.new("ScreenGui")
+local MainScreen = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local MurderMystery1ScriptButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local CloseScriptButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local MurderMystery2ScriptButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+MurderMystery2ScriptLoader.Name = "MurderMystery2ScriptLoader"
+MurderMystery2ScriptLoader.Parent = game.CoreGui
+MurderMystery2ScriptLoader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainScreen.Name = "MainScreen"
+MainScreen.Parent = MurderMystery2ScriptLoader
+MainScreen.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+MainScreen.Position = UDim2.new(0.0702576116, 0, 0.0303605311, 0)
+MainScreen.Size = UDim2.new(0, 322, 0, 125)
+MainScreen.Visible = true
+MainScreen.Active = true
+
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = MainScreen
+
+TextLabel.Parent = MainScreen
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+TextLabel.Size = UDim2.new(0, 322, 0, 29)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Vynx Script Loader"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = TextLabel
+
+MurderMystery1ScriptButton.Name = "MurderMystery(1)ScriptButton"
+MurderMystery1ScriptButton.Parent = MainScreen
+MurderMystery1ScriptButton.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
+MurderMystery1ScriptButton.Position = UDim2.new(0.0124223605, 0, 0.312000006, 0)
+MurderMystery1ScriptButton.Size = UDim2.new(0, 313, 0, 26)
+MurderMystery1ScriptButton.Font = Enum.Font.SourceSansBold
+MurderMystery1ScriptButton.Text = "Vynixus Script Murder Mystery 2"
+MurderMystery1ScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MurderMystery1ScriptButton.TextSize = 20.000
+MurderMystery1ScriptButton.MouseButton1Down:connect(function()
+	loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = MurderMystery1ScriptButton
+
+CloseScriptButton.Name = "CloseScriptButton"
+CloseScriptButton.Parent = MainScreen
+CloseScriptButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseScriptButton.Size = UDim2.new(0, 78, 0, 29)
+CloseScriptButton.Font = Enum.Font.SourceSansBold
+CloseScriptButton.Text = " Close"
+CloseScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseScriptButton.TextSize = 20.000
+CloseScriptButton.MouseButton1Down:connect(function()
+	MainScreen.Visible = false
+	MainScreen.Active = false
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 15)
+UICorner_4.Parent = CloseScriptButton
+
+MurderMystery2ScriptButton.Name = "MurderMystery(2)ScriptButton"
+MurderMystery2ScriptButton.Parent = MainScreen
+MurderMystery2ScriptButton.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
+MurderMystery2ScriptButton.Position = UDim2.new(0.0124223605, 0, 0.567999959, 0)
+MurderMystery2ScriptButton.Size = UDim2.new(0, 313, 0, 26)
+MurderMystery2ScriptButton.Font = Enum.Font.SourceSansBold
+MurderMystery2ScriptButton.Text = "MM2 GUI"
+MurderMystery2ScriptButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MurderMystery2ScriptButton.TextSize = 20.000
+MurderMystery2ScriptButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/ydKrkEU7", true))()
+end)
+
+UICorner_5.CornerRadius = UDim.new(0, 15)
+UICorner_5.Parent = MurderMystery2ScriptButton
